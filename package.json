@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "test": "jest --passWithNoTests",
+    "test": "jest --passWithNoTests __tess__",
     "cy:run": "cypress run",
     "test:e2e": "start-server-and-test dev http://localhost:3000 cy:run"
   },

@@ -11,3 +11,9 @@ I have downloaded the designs from the invited Zeplin design share to `__DESIGNS
 As I have completed a few code challenges, I have developed a few processes that help boilerplate starting a new project for the assignments.
 
 My base product will start with a Vite Vue.js project with Cypress.io installed and some Continuous integration setup. 
+
+## 2020-08-20 20:25:00
+
+I have finished the initial project setup with a few disruptions, committed to GitHub. 
+
+Taking a break, and My next session, I'll be looking at getting the project look and feel wired up. 

@@ -52,7 +52,7 @@ jobs:
       - run: npm install
         env:
           CYPRESS_INSTALL_BINARY: 0
-      - run: npm run build -- --base=/thriva-code-challege/
+      - run: npm run build -- --base=/thriva-code-challenge/
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

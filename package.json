@@ -1,0 +1,21 @@
+{
+  "name": "code-challenge",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "jest --passWithNoTests",
+    "cy:run": "cypress run",
+    "test:e2e": "start-server-and-test dev http://localhost:3000 cy:run"
+  },
+  "dependencies": {
+    "vue": "^3.0.0-rc.1"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.0-rc.1",
+    "cypress": "^5.0.0",
+    "jest": "^26.4.1",
+    "start-server-and-test": "^1.11.3",
+    "vite": "^1.0.0-rc.1"
+  }
+}

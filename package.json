@@ -1,0 +1,58 @@
+{
+  "name": "thriva-front-end-challenge",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "prod": "npm run build && node server.js",
+    "lint": "vue-cli-service lint --fix",
+    "test": "npm run unit && npm run e2e",
+    "e2e": "vue-cli-service test:e2e --headless",
+    "unit": "vue-cli-service test:unit",
+    "unit-watch": "vue-cli-service test:unit --watch",
+    "heroku-postbuild": "npm run build"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "connect-history-api-fallback": "^1.5.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-html": "^4.0.6",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "express": "^4.16.3",
+    "express-history-api-fallback": "^2.2.1",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
+    "vee-validate": "^2.1.0-beta.9",
+    "vue": "^2.5.17",
+    "vue-meta": "^1.5.4",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "vuex-router-sync": "^5.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.4",
+    "@vue/cli-plugin-e2e-cypress": "^3.0.4",
+    "@vue/cli-plugin-eslint": "^3.0.4",
+    "@vue/cli-plugin-unit-jest": "^3.0.4",
+    "@vue/cli-service": "^3.0.4",
+    "@vue/eslint-config-prettier": "^3.0.4",
+    "@vue/test-utils": "^1.0.0-beta.12",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "chance": "^1.0.16",
+    "dotenv": "^6.0.0",
+    "flush-promises": "^1.0.0",
+    "sinon": "^4.5.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "engines": {
+    "node": "10.11.0",
+    "npm": "6.1.0"
+  }
+}

@@ -22,7 +22,10 @@ While getting the repository setup with CI/CD I've found a bug in the initial co
 
 I'm getting the initial outline of the project setup into a working state before attempting the requested tasks.
 
-What I found was the Vue Router did not have a default fallback URL path. Adding a default route path allowed cypress to be redirected to the correct path after loading an initial test.
+What I found was the Vue Router did not have a default fallback URL path. Providing a default route path allowed cypress to be redirected to the correct path after loading an initial test.
 
 Also found that minification was breaking the build because of the bundled already minified content in `index.html` so for the moment we've disabled CSS minification.
 
+## 2020-08-24 10:45:00
+
+Github pages deployment target has been a little temperamental due to the `baseUrl` which needed a subtle alteration.

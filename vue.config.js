@@ -12,5 +12,8 @@ module.exports = {
         'assets': `${projectRoot}/src/assets`
       }
     }
+  },
+  chainWebpack: config =>  {
+    config.plugins.delete('optimize-css')
   }
 }

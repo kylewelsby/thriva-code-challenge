@@ -58,6 +58,13 @@ Utilise the Transition functionality in Vue to allow the screens to flow nicely 
 
 ## 2020-08-24 19:33:00
 
-Wired up Vuex with the `Name.vue` component allowing the persistance between the connectors with a simple committer and state access.
+Wired up Vuex with the `Name.vue` component allowing the persistence between the connectors with a simple committer and state access.
+
+
+## 2020-08-24 20:00:00
+
+As I am working on CheckButton CSS and functionality, I Managed to get myself stuck on the unit testing as the environment is missing something to do with Core.js.
+
+I got around it by not demanding too much from the current codebase installation and just working with the defined Vue Test Utils which have been changed a few times since finding unique ways to unit test components over the years.
 
 

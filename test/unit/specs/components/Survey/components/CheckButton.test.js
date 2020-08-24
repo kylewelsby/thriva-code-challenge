@@ -6,10 +6,19 @@ describe('CheckButton', () => {
 
   beforeEach(() => {
     wrapper = mount(CheckButton, {
-      propsData: {}
+      propsData: {
+        text: 'Energy',
+        value: 'energy'
+      }
     })
   })
 
-  // SUGGESTION: write your tests here
-  test.skip('Write your tests here', () => {})
+  it('renders with expected class', () => {
+    expect(wrapper.classes()).toContain('check-button')
+  })
+
+  it('add selected class to component when clicked', () => {
+    wrapper.setProps({ selected: true })
+    expect(wrapper.classes()).toContain('check-button--selected')
+  })
 })

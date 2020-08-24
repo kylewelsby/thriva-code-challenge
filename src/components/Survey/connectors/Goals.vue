@@ -29,7 +29,8 @@
           improveWeight: {
             name: 'Weight'
           }
-        }
+        },
+        selected: []
       }
     },
     computed: {
@@ -38,6 +39,14 @@
       }
     },
     methods: {
+      toggleItem (key) {
+        if(this.selected.includes(key)) {
+          this.selected.splice(this.selected.indexOf(key), 1)
+        } else if(this.selected.length < 4) {
+          this.selected.push(key)
+        }
+        console.log(this.selected)
+      },
       submit () {
         this.$router.push('/diet')
       },
@@ -60,6 +69,10 @@
           v-for='(goal, key) in goals',
           :key='key',
           :text='goal.name'
+          :value='key'
+          :selected='selected.includes(key)'
+          :disabled='!selected.includes(key) && selected.length >= 4'
+          @click.native="toggleItem(key)"
         )
 
         .grid-x.button-container

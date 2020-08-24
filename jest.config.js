@@ -19,6 +19,7 @@ module.exports = {
     "**/test/unit/**/*.test.(js|jsx|ts|tsx)|**/__test__/*.(js|jsx|ts|tsx)"
   ],
   setupFiles: ['./test/unit/setup'],
+  transformIgnorePatterns: ["/node_modules/(?!@babel/runtime)"],
   coverageDirectory: './test/unit/coverage',
   collectCoverageFrom: [
     'src/**/*.{js,vue}',

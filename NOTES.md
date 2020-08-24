@@ -17,3 +17,12 @@ My base product will start with a Vite Vue.js project with Cypress.io installed 
 I have finished the initial project setup with a few disruptions, committed to GitHub. 
 
 Taking a break, and My next session, I'll be looking at getting the project look and feel wired up. 
+
+## 2020-08-24 09:30:00
+
+Going to be honest, I only seen the Zeplin designs for now with the assumption to implement the functionality of the designs from start to finish in the best of my understanding. 
+
+It was not until just now where I relalised email invitation email had a codebase attachment until now containing a bunch of isolated challenges.  
+
+Now I am abandoning this attempt and re-starting the code-challenge with the new found information 
+

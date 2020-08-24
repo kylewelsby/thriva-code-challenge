@@ -29,3 +29,35 @@ Also found that minification was breaking the build because of the bundled alrea
 ## 2020-08-24 10:45:00
 
 Github pages deployment target has been a little temperamental due to the `baseUrl` which needed a subtle alteration.
+
+## 2020-08-24 18:45:00
+
+Right, now to approach the tasks after getting the codebase into a relaxed state to start with.
+
+Reading through the tasks, I see a few things I would like to challenge;
+
+#### Task 1
+
+Use Vuex to store the state through transitions, possibly hook in local storage for persistent storage.
+
+#### Task 2
+
+Try my hand with the Stylus dependency to get this component looking as requested.
+
+#### Task 3
+
+Get some unit-tests for the component written, will use `npx jest --watchAll test/unit/specs/components/Survey/components/CheckButton.test.js` to watch for changes and continuously test the assertions I write.
+
+#### Task 5
+
+I see Vee validate installed into the project, so I'll see about adding client-side validations for this.
+
+#### Task 6
+
+Utilise the Transition functionality in Vue to allow the screens to flow nicely with CSS.
+
+## 2020-08-24 19:33:00
+
+Wired up Vuex with the `Name.vue` component allowing the persistance between the connectors with a simple committer and state access.
+
+

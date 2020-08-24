@@ -8,12 +8,6 @@
       ThvButton,
       CheckButton
     },
-    props: {
-      name: {
-        type: String,
-        default: ''
-      }
-    },
     data () {
       return {
         goals: {
@@ -36,6 +30,11 @@
             name: 'Weight'
           }
         }
+      }
+    },
+    computed: {
+      name () {
+        return this.$store.state.survey.name
       }
     },
     methods: {

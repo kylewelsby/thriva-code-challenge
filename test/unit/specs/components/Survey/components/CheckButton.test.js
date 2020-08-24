@@ -6,9 +6,10 @@ describe('CheckButton', () => {
 
   beforeEach(() => {
     wrapper = mount(CheckButton, {
-      propsData: {
-      }
+      propsData: {}
     })
   })
+
   // SUGGESTION: write your tests here
+  test.skip('Write your tests here', () => {})
 })

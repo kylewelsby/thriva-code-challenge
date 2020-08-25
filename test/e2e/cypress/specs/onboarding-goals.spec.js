@@ -11,6 +11,10 @@ context('Onboarding - Goals', () => {
     )
   })
 
+  it("can't submit without selection", () => {
+    cy.get('button.primary').should('have.attr', 'disabled')
+  })
+
   it('toggles goals', () => {
     cy.get('.check-button:eq(0)').click().should('have.class', 'check-button--selected')
     cy.get('.check-button:eq(1)').click().should('have.class', 'check-button--selected')

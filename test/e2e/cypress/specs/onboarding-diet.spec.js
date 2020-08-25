@@ -19,6 +19,10 @@ context('Onboarding - Diet', () => {
     cy.location('pathname').should('eq', '/dob')
   })
 
+  it("can't submit without selection", () => {
+    cy.get('button.primary').should('have.attr', 'disabled')
+  })
+
   it('Remembers name when returning from next page', () => {
     cy.get('.check-button:eq(1)').click()
     cy.get('button.primary').click()

@@ -62,6 +62,7 @@
             thv-button(
               element='button',
               size='large'
+              :disabled="!value"
               @click='submit'
             ) Next
 

@@ -86,6 +86,7 @@
             thv-button(
               element='button',
               size='large'
+              :disabled="selected.length === 0 || selected.length > 4"
               @click='submit'
             ) Next
 </template>

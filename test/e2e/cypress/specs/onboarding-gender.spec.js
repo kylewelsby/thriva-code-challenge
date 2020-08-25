@@ -20,6 +20,10 @@ context('Onboarding - Gender', () => {
     )
   })
 
+  it("can't submit without selection", () => {
+    cy.get('button.primary').should('have.attr', 'disabled')
+  })
+
   it('asks for diet', () => {
     cy.get('.check-button:eq(1)').should('contain.text', 'Female').click()
     cy.get('button.primary').click()

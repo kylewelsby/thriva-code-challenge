@@ -76,6 +76,7 @@
             thv-button(
               element='button',
               size='large'
+              :disabled="!dob"
               @click='submit'
             ) Next
 </template>

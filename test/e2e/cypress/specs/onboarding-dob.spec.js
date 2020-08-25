@@ -15,6 +15,10 @@ context('Onboarding - DoB', () => {
     )
   })
 
+  it("can't submit without selection", () => {
+    cy.get('button.primary').should('have.attr', 'disabled')
+  })
+
   it('asks for date of birth', () => {
     cy.get('.input__dob__day input').type('1')
     cy.get('.input__dob__month input').type('1')

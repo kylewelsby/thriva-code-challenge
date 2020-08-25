@@ -9,6 +9,10 @@ context('Onboarding - Name', () => {
     )
   })
 
+  it("can't submit without selection", () => {
+    cy.get('button.primary').should('have.attr', 'disabled')
+  })
+
   it('Allows progression to next page', () => {
     const button = cy.get('button.primary')
     button.should('have.attr', 'disabled')

@@ -72,7 +72,8 @@
             p You can find stage one of the survey 
               router-link(to='/name') here
       
-      router-view
+      transition(name='fade' mode='out-in')
+        router-view
 
 </template>
 

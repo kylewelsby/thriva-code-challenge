@@ -14,7 +14,8 @@
   .wrapper.wrapper--minimal
     Header(:funnelName='$route.meta.funnelName')
     .content
-      router-view
+      transition(name='fade' mode="out-in")
+        router-view
 </template>
 
 <style lang='stylus'>
@@ -39,4 +40,14 @@
       @media (min-width: 768px)
         padding-top: 82px
 
+  .fade-enter-active,
+  .fade-leave-active
+    transition-duration: 0.3s;
+    transition-property: opacity;
+    transition-timing-function: ease;
+
+
+  .fade-enter,
+  .fade-leave-active
+    opacity: 0
 </style>

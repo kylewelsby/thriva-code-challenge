@@ -13,6 +13,9 @@
         name: ''
       }
     },
+    beforeMount () {
+      this.name = this.$store.state.survey.name
+    },
     methods: {
       submit () {
         this.$store.commit('survey/setName', this.name)

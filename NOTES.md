@@ -87,3 +87,7 @@ Date of Birth input component had a bug which the validator would not react on k
 I fixed this bug by listening to keypresses and re-evaluating the validation status of the component.
 
 I also taken the liberty to remove Moment.js from this component, simply because there's no need for it as the validation and date code can be written in vanilla JavaScript.
+
+## 2020-08-25 10:15:00
+
+Added feature to components to ensure the component is loaded with stored data if available when navigating backwards.

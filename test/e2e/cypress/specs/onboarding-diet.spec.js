@@ -18,4 +18,12 @@ context('Onboarding - Diet', () => {
     cy.get('button.primary').click()
     cy.location('pathname').should('eq', '/dob')
   })
+
+  it('Remembers name when returning from next page', () => {
+    cy.get('.check-button:eq(1)').click()
+    cy.get('button.primary').click()
+    cy.location('pathname').should('eq', '/dob')
+    cy.get('.back-button').click()
+    cy.get('.check-button:eq(1)').should('have.class', 'check-button--selected')
+  })
 })

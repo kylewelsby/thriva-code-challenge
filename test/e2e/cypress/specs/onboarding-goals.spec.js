@@ -27,4 +27,12 @@ context('Onboarding - Goals', () => {
     cy.get('.check-button:eq(3)').click()
     cy.get('.check-button:eq(4)').should('have.class', 'check-button--disabled')
   })
+
+  it('Remembers name when returning from next page', () => {
+    cy.get('.check-button:eq(1)').click()
+    cy.get('button.primary').click()
+    cy.location('pathname').should('eq', '/diet')
+    cy.get('.back-button').click()
+    cy.get('.check-button:eq(1)').should('have.class', 'check-button--selected')
+  })
 })

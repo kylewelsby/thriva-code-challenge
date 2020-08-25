@@ -36,6 +36,9 @@
         selected: null
       }
     },
+    beforeMount () {
+      this.selected = this.$store.state.survey.diet
+    },
     methods: {
       toggleItem (key) {
         this.selected = key

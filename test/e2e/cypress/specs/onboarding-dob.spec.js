@@ -23,4 +23,16 @@ context('Onboarding - DoB', () => {
     cy.get('button.primary').click()
     cy.location('pathname').should('eq', '/gender')
   })
+
+  it('Remembers name when returning from next page', () => {
+    cy.get('.input__dob__day input').type('1')
+    cy.get('.input__dob__month input').type('1')
+    cy.get('.input__dob__year input').type('1970')
+    cy.get('button.primary').click()
+    cy.location('pathname').should('eq', '/gender')
+    cy.get('.back-button').click()
+    cy.get('.input__dob__day input').should('have.value', '1')
+    cy.get('.input__dob__month input').should('have.value', '1')
+    cy.get('.input__dob__year input').should('have.value', '1970')
+  })
 })

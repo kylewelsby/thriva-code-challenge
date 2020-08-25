@@ -13,6 +13,9 @@
         dob: null
       }
     },
+    beforeMount () {
+      this.dob = this.$store.state.survey.dob
+    },
     computed: {
       disableNext () {
         let under18 = this.$refs.DobInput && this.$refs.DobInput.ageError

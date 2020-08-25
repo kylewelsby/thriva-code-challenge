@@ -33,6 +33,9 @@
         selected: []
       }
     },
+    beforeMount () {
+      this.selected = this.$store.state.survey.goals || []
+    },
     computed: {
       name () {
         return this.$store.state.survey.name

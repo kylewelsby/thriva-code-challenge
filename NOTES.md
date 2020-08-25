@@ -74,3 +74,16 @@ I managed to get Tasks 1-3 completed last night and had to step away from the co
 
 This morning I'm committing last nights work and working on finishing the final tasks.
 
+## 2020-08-25 09:18:00
+
+I am aware of the lack of unit tests for connector components.  The testing framework is not working well on my machine right outside of running `npm run unit`. I would debug and resolve the issue, but I'm aware the tasks are not yet complete.  So I will complete the core tasks first and re-visit the broken testing framework to patch in some unit tests that currently do not exist.
+
+I write E2E tests as I go along.
+
+## 2020-08-25 10:00:00
+
+Date of Birth input component had a bug which the validator would not react on key presses.
+
+I fixed this bug by listening to keypresses and re-evaluating the validation status of the component.
+
+I also taken the liberty to remove Moment.js from this component, simply because there's no need for it as the validation and date code can be written in vanilla JavaScript.

@@ -1,6 +1,5 @@
 <script>
   import TextInput from '@/components/Shared/TextInput.vue'
-  import moment from 'moment'
 
   export default {
     name: 'DobInput',
@@ -32,11 +31,11 @@
     data () {
       let values = { day: null, month: null, year: null }
       if (this.value) {
-        const parsedValue = moment(this.value)
+        const parsedValue = new Date(this.value)
         values = Object.assign(values, {
-          day: parsedValue.format('DD'),
-          month: parsedValue.format('MM'),
-          year: parsedValue.year().toString()
+          day: parsedValue.getDate().toString(),
+          month: (parsedValue.getMonth()+1).toString(),
+          year: parsedValue.getFullYear().toString()
         })
       }
 
@@ -53,13 +52,19 @@
     },
     computed: {
       dob () {
-        if (this.errors.items.length === 0 && this.day && this.month && this.year) {
-          let dob = moment.utc({ year: this.year, month: parseInt(this.month) - 1, day: this.day }).toISOString()
-          return dob ? dob.substring(0, 10) : undefined
+        if (this.day && this.month && this.year) {
+          let dob = new Date()
+          dob.setFullYear(this.year)
+          dob.setMonth(this.month-1)
+          dob.setDate(this.day)
+          let dobStr = dob.toISOString()
+          return dobStr ? dobStr.substring(0, 10) : undefined
         }
       },
       ageError () {
-        return this.dob ? moment().diff(moment(this.dob), 'years') < this.minAge : null
+        let currentYear = new Date().getFullYear()
+        let diffYears = currentYear - this.years
+        return diffYears < this.minAge
       }
     },
     watch: {
@@ -82,6 +87,7 @@
         :error='errors.has("day")',
         v-validate='"required|min_value:1|max_value:31"',
         maxlength="2"
+        @keyup='handleSubmit()'
       )
       text-input.input__dob__month(
         name='month'
@@ -91,6 +97,7 @@
         :error='errors.has("month")',
         v-validate='"required|min_value:1|max_value:12"',
         maxlength="2"
+        @keyup='handleSubmit()'
       )
       text-input.input__dob__year(
         name='year'
@@ -100,6 +107,7 @@
         v-validate='"required|min_value:1900|max_value:2018"',
         :error='errors.has("year")',
         maxlength="4"
+        @keyup='handleSubmit()'
       )
     p.body--small.input__feedback(v-if='feedback')
       span {{ feedback }}

@@ -7,5 +7,8 @@ export default {
   },
   setDiet (state, payload) {
     state.diet = payload
+  },
+  setDob (state, payload) {
+    state.dob = payload
   }
 }

@@ -8,6 +8,11 @@
       DobInput,
       ThvButton
     },
+    data () {
+      return {
+        dob: null
+      }
+    },
     computed: {
       disableNext () {
         let under18 = this.$refs.DobInput && this.$refs.DobInput.ageError
@@ -26,7 +31,7 @@
         this.$validator.reset()
         this.$validator.validate().then(result => {
           if (result && !this.feedback) {
-            // SUGGESTION: could save DOB here is it is now assumed valid
+            this.$store.commit('survey/setDob', this.dob)
             this.$router.push('/gender')
           }
         })
@@ -51,7 +56,7 @@
           ref='DobInput'
           v-validate="'required'",
           data-vv-value-path="dob",
-          :value='dob',
+          v-model='dob',
           name='dob',
           :error='errors.has("dob")',
           minAge='18',

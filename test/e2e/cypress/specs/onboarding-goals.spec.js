@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Onboarding - Name', () => {
+context('Onboarding - Goals', () => {
   beforeEach(() => {
     cy.visit('/name')
     cy.get('input[name=name]').type('John')
@@ -16,6 +16,8 @@ context('Onboarding - Name', () => {
     cy.get('.check-button:eq(1)').click().should('have.class', 'check-button--selected')
     cy.get('.check-button:eq(2)').click().should('have.class', 'check-button--selected')
     cy.get('.check-button:eq(3)').click().should('have.class', 'check-button--selected')
+    cy.get('button.primary').click()
+    cy.location('pathname').should('eq', '/diet')
   })
 
   it('allows only 4 options', () => {

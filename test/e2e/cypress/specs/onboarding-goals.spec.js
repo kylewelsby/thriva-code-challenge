@@ -4,7 +4,7 @@ context('Onboarding - Goals', () => {
   beforeEach(() => {
     cy.visit('/name')
     cy.get('input[name=name]').type('John')
-    cy.get('button.primary').click()
+    cy.get('.survey-questions__name button.primary').click()
     cy.get('h1').should(
       'contain.text',
       'Nice to meet you John. What would you like to focus on?'
@@ -20,7 +20,7 @@ context('Onboarding - Goals', () => {
     cy.get('.check-button:eq(1)').click().should('have.class', 'check-button--selected')
     cy.get('.check-button:eq(2)').click().should('have.class', 'check-button--selected')
     cy.get('.check-button:eq(3)').click().should('have.class', 'check-button--selected')
-    cy.get('button.primary').click()
+    cy.get('.survey-questions__goals button.primary').click()
     cy.location('pathname').should('eq', '/diet')
   })
 
@@ -34,9 +34,9 @@ context('Onboarding - Goals', () => {
 
   it('Remembers name when returning from next page', () => {
     cy.get('.check-button:eq(1)').click()
-    cy.get('button.primary').click()
+    cy.get('.survey-questions__goals button.primary').click()
     cy.location('pathname').should('eq', '/diet')
-    cy.get('.back-button').click()
+    cy.get('.survey-questions__diet .back-button').click()
     cy.get('.check-button:eq(1)').should('have.class', 'check-button--selected')
   })
 })

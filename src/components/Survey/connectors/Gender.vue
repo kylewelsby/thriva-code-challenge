@@ -21,7 +21,7 @@
         value: null
       }
     },
-    beforeMount() {
+    beforeMount () {
       this.value = this.$store.state.survey.gender || null
     },
     methods: {

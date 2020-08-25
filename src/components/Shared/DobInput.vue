@@ -34,7 +34,7 @@
         const parsedValue = new Date(this.value)
         values = Object.assign(values, {
           day: parsedValue.getDate().toString(),
-          month: (parsedValue.getMonth()+1).toString(),
+          month: (parsedValue.getMonth() + 1).toString(),
           year: parsedValue.getFullYear().toString()
         })
       }
@@ -55,7 +55,7 @@
         if (this.day && this.month && this.year) {
           let dob = new Date()
           dob.setFullYear(this.year)
-          dob.setMonth(this.month-1)
+          dob.setMonth(this.month - 1)
           dob.setDate(this.day)
           let dobStr = dob.toISOString()
           return dobStr ? dobStr.substring(0, 10) : undefined

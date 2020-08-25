@@ -43,9 +43,9 @@
     },
     methods: {
       toggleItem (key) {
-        if(this.selected.includes(key)) {
+        if (this.selected.includes(key)) {
           this.selected.splice(this.selected.indexOf(key), 1)
-        } else if(this.selected.length < 4) {
+        } else if (this.selected.length < 4) {
           this.selected.push(key)
         }
       },

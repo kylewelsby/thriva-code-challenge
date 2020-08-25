@@ -94,4 +94,23 @@ Added feature to components to ensure the component is loaded with stored data i
 
 ## 2020-08-25 10:48:00
 
-Implemented the functionality for the progress bar, decided to use the route name as the marker for the position of the progress bar.  However this would possibly could be revisited again, as it would be easy to miss out the maintance part for this progress bar when adding another stage to the onboarding.  The progress bar might display a empty value on a unknown stage.
+Implemented the functionality for the progress bar, decided to use the route name as the marker for the position of the progress bar.  However, this would possibly be re-visited again, as it would be easy to miss out the maintenance part for this progress bar when adding another stage to the onboarding.  The progress bar might display an empty value on an unknown view.
+
+## 2020-08-25 15:52:00
+
+I believe I have completed the core tasks set out in this code challenge.  It has taken me a few different sessions over several days to get to a completion point I am happy to submit.
+
+### Talking points:
+* **Why was this completed sooner?** - Timing of this code challenge coordinated with a recent apartment move.  I underestimated how long moving a "settling in" would take.  I have been attempting to do this code challenge around sorting numerous administrations and environmental issues.  This delay should not be a reflection of my ability to deliver.  I'm in the firm belief that it's best to give my best knowledge instead of delivering unfinished work.  No customer would be happy with on-time but non-working deployments.
+
+* **What about unit-testing and Test Driven Development?**  -  TDD is a luxury on projects with a great deal of business logic and time to follow the correct patterns, "Red, Green, Refactor".  However, the given time constraint and nature of this project, I decided to omit heavy unit testing in favour of our e2e and functional testing covered by Cypress.io.  I usually would run `jest --watchAll` when writing code and work with quick terminal feedback look instead of eyeball testing by refreshing the browser and clicking around the application.  When giving feedback on Pull Requests, I like to see tests covering the nature of the change.
+
+* **What would I have done differently on this challenge?**  -
+  * Firstly, and to be completely honest, I would have liked to have seen the attached codebase earlier.  It completely missed from the context of the email.  Ideally would have been great to have forked the project directly on GitHub.
+  * I would have like to have written more unit tests for components to cover a few different edges.
+  * I would have preferred to have had the right amount of focus time on the project in one go.
+  * It would have been nice to see a couple working unit and e2e tests in place to prove the project is working as expect from a starting point to avoid in-depth debugging into complexities which could be questionable about system differences.
+
+* **What's my view on CSS and HTML syntax tools "Stylus and Pug"?** - I tend to write my code as native as possible without any additional steps to transpose or re-interpolate code to HTML & CSS.  I can see and understand the appeal, for a more straightforward writing and development environment.
+
+* **How do you like your feedback?** - With anything, feedback is very crucial to understand and improve oneself, product or business.  Ideally, it is best to give negative feedback wrapped in good feedback, much like a burger "feedback burger"  Good-bad-good.

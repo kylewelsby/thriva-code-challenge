@@ -49,7 +49,7 @@ Testing is covered by Jest and Cypress with the following commands;
 
 Unit tests
 ```bash
-npm run test
+npm run unit
 ```
 
 End-to-end tests

@@ -91,3 +91,7 @@ I also taken the liberty to remove Moment.js from this component, simply because
 ## 2020-08-25 10:15:00
 
 Added feature to components to ensure the component is loaded with stored data if available when navigating backwards.
+
+## 2020-08-25 10:48:00
+
+Implemented the functionality for the progress bar, decided to use the route name as the marker for the position of the progress bar.  However this would possibly could be revisited again, as it would be easy to miss out the maintance part for this progress bar when adding another stage to the onboarding.  The progress bar might display a empty value on a unknown stage.

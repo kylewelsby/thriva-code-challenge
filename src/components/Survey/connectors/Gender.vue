@@ -17,12 +17,17 @@
           female: {
             name: 'Female'
           }
-        }
+        },
+        value: null
       }
+    },
+    beforeMount() {
+      this.value = this.$store.state.survey.gender || null
     },
     methods: {
       submit () {
-        alert('Survey complete!')
+        this.$store.commit('survey/setGender', this.value)
+        alert(`Survey complete!\n${JSON.stringify(this.$store.state.survey, null, '  ')}`)
       },
       back () {
         this.$router.push('/dob')
@@ -44,6 +49,9 @@
           v-for='(gender, key) in genders',
           :key='key',
           :text='gender.name'
+          :value='key'
+          :selected="value === key"
+          @click.native="value = key"
         )
 
         .grid-x.button-container

@@ -10,5 +10,8 @@ export default {
   },
   setDob (state, payload) {
     state.dob = payload
+  },
+  setGender (state, payload) {
+    state.gender = payload
   }
 }

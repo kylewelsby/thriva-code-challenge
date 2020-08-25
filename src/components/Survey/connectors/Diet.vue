@@ -32,11 +32,16 @@
           other: {
             name: 'Other'
           }
-        }
+        },
+        selected: null
       }
     },
     methods: {
+      toggleItem (key) {
+        this.selected = key
+      },
       submit () {
+        this.$store.commit('survey/setDiet', this.selected)
         this.$router.push('/dob')
       },
       back () {
@@ -57,6 +62,9 @@
           v-for='(diet, key) in diets',
           :key='key',
           :text='diet.name'
+          :value='key'
+          :selected='selected === key'
+          @click.native="toggleItem(key)"
         )
 
         .grid-x.button-container

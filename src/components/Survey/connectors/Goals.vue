@@ -45,9 +45,9 @@
         } else if(this.selected.length < 4) {
           this.selected.push(key)
         }
-        console.log(this.selected)
       },
       submit () {
+        this.$store.commit('survey/setGoals', this.selected)
         this.$router.push('/diet')
       },
       back () {

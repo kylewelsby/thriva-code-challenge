@@ -68,3 +68,9 @@ As I am working on CheckButton CSS and functionality, I Managed to get myself st
 I got around it by not demanding too much from the current codebase installation and just working with the defined Vue Test Utils which have been changed a few times since finding unique ways to unit test components over the years.
 
 
+## 2020-08-25 09:15:00
+
+I managed to get Tasks 1-3 completed last night and had to step away from the computer.
+
+This morning I'm committing last nights work and working on finishing the final tasks.
+

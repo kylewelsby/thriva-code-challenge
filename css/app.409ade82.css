@@ -680,6 +680,43 @@ button.button.transparent:hover {
   color: #565b75;
 }
 
+.check-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 478px;
+  min-height: 100px;
+  border-radus: 4px;
+  border: solid 1px #ced0d9;
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 15px 20px;
+  color: #3d4250;
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: normal;
+  transition-property: border, background-color;
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
+  cursor: pointer;
+}
+.check-button.check-button--selected {
+  background-color: #f4fcfd;
+  border: solid 2px #3ecadd;
+}
+.check-button.check-button--disabled {
+  background-color: #fff;
+  border: solid 1px #e5e4f1;
+  color: #ced0d9;
+  cursor: default;
+}
+@media (min-width: 768px) {
+.check-button {
+    min-height: 120px;
+    padding: 20px 30px;
+    font-weight: 20px;
+}
+}
 
 .input__dob .input__dob__day,
 .input__dob .input__dob__month {
@@ -712,4 +749,4 @@ button.button.transparent:hover {
 }
 
 
-/*# sourceMappingURL=app.05a45f2f.css.map*/
+/*# sourceMappingURL=app.409ade82.css.map*/
